@@ -1186,7 +1186,7 @@ static NSInteger const ATLPhotoActionSheet = 1000;
     if (self.collectionView) {
         dispatch_suspend(self.animationQueue);
         [self.collectionView performBatchUpdates:^{
-            for (ATLDataSourceChange *change in self.objectChanges) {
+            for (ATLDataSourceChange *change in objectChanges) {
                 switch (change.type) {
                     case LYRQueryControllerChangeTypeInsert:
                         [self.collectionView insertSections:[NSIndexSet indexSetWithIndex:change.newIndex]];
@@ -1208,7 +1208,6 @@ static NSInteger const ATLPhotoActionSheet = 1000;
                         break;
                 }
             }
-            [self.objectChanges removeAllObjects];
         } completion:^(BOOL finished) {
             dispatch_resume(self.animationQueue);
         }];
