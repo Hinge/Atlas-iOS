@@ -296,3 +296,8 @@ Atlas was developed in San Francisco by the Layer team. If you have any technica
 * [Kevin Coleman](https://github.com/kcoleman731)
 * [Klemen Verdnik](https://github.com/chipxsd)
 * [Blake Watters](https://github.com/blakewatters)
+
+## Change Log
+
+* [00e55a1e631cc62196a452bf281955f4e6bc8bd2](https://github.com/Hinge/Atlas-iOS/commit/00e55a1e631cc62196a452bf281955f4e6bc8bd2)
+* [5617c7a03fc4091fa4ee19a376d14064944e54b7](https://github.com/Hinge/Atlas-iOS/commit/5617c7a03fc4091fa4ee19a376d14064944e54b7)
