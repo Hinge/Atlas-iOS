@@ -100,10 +100,6 @@ static CGFloat const ATLMaxScrollDistanceFromBottom = 150;
 {
     [super viewWillAppear:animated];
 
-    // Workaround for a modal dismissal causing the message toolbar to remain offscreen on iOS 8.
-    if (self.presentedViewController) {
-        [self.view becomeFirstResponder];
-    }
     if (self.addressBarController && self.firstAppearance) {
         [self updateTopCollectionViewInset];
     }
