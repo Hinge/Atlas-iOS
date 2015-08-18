@@ -29,9 +29,9 @@ NSString *const ATLGIFAccessibilityLabel = @"Message: GIF";
 NSString *const ATLImageAccessibilityLabel = @"Message: Image";
 
 CGFloat const ATLMessageCellMinimumHeight = 10.0f;
-CGFloat const ATLMessageCellHorizontalMargin = 16.0f;
-CGFloat const ATLAvatarImageLeadPadding = 12.0f;
-CGFloat const ATLAvatarImageTailPadding = 7.0f;
+CGFloat const ATLMessageCellHorizontalMargin = 62.0f;
+CGFloat const ATLAvatarImageLeadPadding = 8.0f;
+CGFloat const ATLAvatarImageTailPadding = 10.0f;
 
 @interface ATLMessageCollectionViewCell () <LYRProgressDelegate>
 
