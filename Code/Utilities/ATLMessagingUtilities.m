@@ -21,6 +21,7 @@
 #import "ATLMessagingUtilities.h"
 #import "ATLErrors.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "ATLMessageCollectionViewCell.h"
 
 NSString *const ATLMIMETypeTextPlain = @"text/plain";
 NSString *const ATLMIMETypeTextHTML = @"text/HTML";
@@ -57,6 +58,7 @@ CGFloat ATLMaxCellHeight()
 
 CGSize ATLSizeProportionallyConstrainedToSize(CGSize nativeSize, CGSize maxSize)
 {
+    if (nativeSize.width < maxSize.width && nativeSize.height < maxSize.height) return nativeSize;
     CGSize itemSize;
     CGFloat widthScale = maxSize.width / nativeSize.width;
     CGFloat heightScale = maxSize.height / nativeSize.height;
