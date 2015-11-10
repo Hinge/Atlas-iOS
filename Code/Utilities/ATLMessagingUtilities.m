@@ -37,6 +37,8 @@ NSString *const ATLMIMETypeDate = @"text/date";
 NSUInteger const ATLDefaultThumbnailSize = 512;
 NSUInteger const ATLDefaultGIFThumbnailSize = 64;
 
+CGFloat const ATLMaxMessageSizeScreenRatio = 0.65;
+
 NSString *const ATLImagePreviewWidthKey = @"width";
 NSString *const ATLImagePreviewHeightKey = @"height";
 NSString *const ATLLocationLatitudeKey = @"lat";
@@ -46,7 +48,7 @@ NSString *const ATLLocationLongitudeKey = @"lon";
 
 CGFloat ATLMaxCellWidth()
 {
-    return 196;
+    return floorf([UIScreen mainScreen].bounds.size.width*ATLMaxMessageSizeScreenRatio);
 }
 
 CGFloat ATLMaxCellHeight()
