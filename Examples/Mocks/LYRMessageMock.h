@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 #import <Foundation/Foundation.h>
-#import <LayerKit/LayerKit.h> 
+#import <Atlas/Atlas.h>
 
 @class LYRConversationMock;
 
@@ -32,7 +32,7 @@
 
 @property (nonatomic, readonly) NSURL *identifier LYR_QUERYABLE_PROPERTY;
 @property (nonatomic) NSUInteger position LYR_QUERYABLE_PROPERTY;
-@property (nonatomic) LYRConversationMock *conversation LYR_QUERYABLE_PROPERTY;
+@property (nonatomic, weak) LYRConversationMock *conversation LYR_QUERYABLE_PROPERTY;
 @property (nonatomic) NSArray *parts;
 @property (nonatomic, readonly) BOOL isSent LYR_QUERYABLE_PROPERTY;
 @property (nonatomic, readonly) BOOL isDeleted;
