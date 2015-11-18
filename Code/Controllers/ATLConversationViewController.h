@@ -19,7 +19,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <LayerKit/LayerKit.h>
+@import LayerKit;
 #import <MapKit/MapKit.h>
 #import "ATLParticipant.h"
 #import "ATLBaseConversationViewController.h"
@@ -253,6 +253,13 @@ typedef NS_ENUM(NSUInteger, ATLAvatarItemDisplayFrequency) {
  @discussion The controller manages updating the current location of the device and sending a message with an `ATLMIMETypeLocation` MIMEType.
  */
 - (void)sendLocationMessage;
+
+/**
+ @abstract Sends the specified message in the current conversation and informs the delegate of success or failure.
+ @discussion This method can be used to send custom `LYRMessage` objects that are initialized outside of Atlas's default implementation.
+ @param message The Message object to send.
+ */
+- (void)sendMessage:(LYRMessage *)message;
 
 ///---------------------------
 /// @name Configuring Behavior
